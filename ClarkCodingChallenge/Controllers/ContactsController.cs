@@ -32,9 +32,14 @@ namespace ClarkCodingChallenge.Controllers
             if (ModelState.IsValid)
             {
                 contactList.Add(contacts);
-                return RedirectToAction("Index");
+                return RedirectToAction("Success");
             }
             return View(contacts);
+        }
+
+        public ActionResult Success()
+        {
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
